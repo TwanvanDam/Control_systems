@@ -3,8 +3,8 @@ import matplotlib.pyplot as plt
 
 # control this with the following
 t_kitchen = 20.0;         # kitchen (ambient temperature)
-fridge_cap = 100000;       # thermal capacity, Joule/deg
-freeze_cap = 100000;       # thermal capacity, Joule/deg
+fridge_cap = 100000/2;       # thermal capacity, Joule/deg
+freeze_cap = 100000/2;       # thermal capacity, Joule/deg
 
 # initial state of the fridge, kitchen temperature
 icdict = { 't1': t_kitchen, 't2' : t_kitchen }

@@ -67,6 +67,8 @@ print(np.sum(r))
 
 #%% 4.3 time_2
 import control.matlab as c
+import numpy as np
+import matplotlib.pyplot as plt
 s = c.tf([1, 0], [1])
 m = 2
 k = 20
@@ -77,7 +79,7 @@ t = np.arange(0,10.01,0.01)
 H = 1/ (m*s**2 + b*s +k )
 
 y1, t = c.step(H, t)       # function returns response and time vector
-y2, t = c.impulse(H, t)  # likewise
+y2, t = c.impulse(H, t)   # likewise
 plt.plot(t, y1, label="step")
 plt.plot(t, y2, label="impulse")
 plt.legend()
